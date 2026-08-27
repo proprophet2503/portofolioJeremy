@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600">
+  <rect width="480" height="600" fill="#0e1013"/>
+  <rect x="0.5" y="0.5" width="479" height="599" fill="none" stroke="#2b313b"/>
+  <circle cx="240" cy="240" r="72" fill="none" stroke="#2b313b" stroke-width="2"/>
+  <path d="M120 470c0-66 54-120 120-120s120 54 120 120" fill="none" stroke="#2b313b" stroke-width="2"/>
+  <text x="240" y="545" fill="#6f7a8a" font-family="monospace" font-size="16" text-anchor="middle">PLACEHOLDER PORTRAIT</text>
+</svg>
