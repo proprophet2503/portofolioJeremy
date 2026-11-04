@@ -9,35 +9,24 @@ Live: https://proprophet2503.github.io/portofolioJeremy/
 
 ```
 index.html            Single page, all content
-css/tokens.css        Design tokens (colour, type, spacing, motion)
-css/base.css          Reset, typography, layout primitives, reveal animation
-css/components.css    Nav, hero, project cards, timeline, footer
-css/viz.css           Shared styling for the figures
-js/main.js            Bootstrap: reveal, nav spy, repo grid, lazy viz mounting
-js/data/repos.js      Secondary project list (edit here to add a repo)
-js/viz/utils.js       Canvas, animation loop, seeded RNG, toggle binding
-js/viz/*.js           One module per project figure
+css/tokens.css        Design tokens (colour, type, spacing)
+css/base.css          Reset, typography, layout primitives
+css/components.css    Nav, hero, project cards, timeline, skills, footer
+js/main.js            Nav highlighting, mobile menu, further-projects list, footer year
+js/data/repos.js      Further projects list (edit here to add a project)
 assets/               CV PDF and placeholder images
 ```
 
-## Figures
+## Design
 
-Six project figures are drawn in the browser on canvas. They are **schematics of
-the method**, generated from seeded synthetic data. They are not plots of measured
-run output, and the page says so in two places.
+Light theme only (`color-scheme: light`), plain and text-first. Layout follows two
+references: the hero, "learn more about my" buttons, alternating timeline and skills
+grid come from a classic one-page academic portfolio; the project cards
+(Highlights, Tags, Summary) and the "Further projects" list grouped by area follow
+a Jekyll ML portfolio. No generated figures or scroll animations.
 
-| Module | Project | Shows |
-| --- | --- | --- |
-| `flow-matching.js` | SwaraTTS | Transport path from prior noise to the speech latent, flow matching against reverse diffusion |
-| `modality-fusion.js` | AVID-MM | Which encoder branch stays active under each modality-dropout state |
-| `beer-lambert.js` | PINN lung reconstruction | Ray integration through a thorax phantom and the resulting detector profile |
-| `spiking.js` | Neuromorphic vision | Izhikevich membrane trace plus the derivative backprop receives, Heaviside against surrogate |
-| `cough-lstm.js` | TB cough screening | Log-mel surface consumed frame by frame by an unrolled LSTM |
-| `eeg-subbands.js` | EEG ALS screening | Delta through gamma decomposition with MAV, variance, and standard deviation per band |
-
-Each figure mounts lazily when it approaches the viewport, pauses its animation
-loop when scrolled off screen, and renders a single static frame under
-`prefers-reduced-motion`.
+Fonts: Montserrat for headings, Source Sans 3 for body text. One accent colour,
+`--accent` in `css/tokens.css`.
 
 ## Placeholders to replace
 
@@ -45,7 +34,7 @@ loop when scrolled off screen, and renders a single static frame under
 | --- | --- | --- |
 | `assets/placeholders/og-image.svg` | Social preview card | A real 1200x630 PNG or JPG. Update the `og:image` meta tag in `index.html` to the new filename |
 | `assets/placeholders/favicon.svg` | Browser tab icon | A real favicon. Update the `<link rel="icon">` tag |
-| `assets/placeholders/portrait.svg` | Optional headshot | Not wired into the page yet. Add a photo here and place it in the hero if you want one |
+| `assets/placeholders/portrait.svg` | Optional headshot | Not wired in. Add `assets/portrait.jpg` (square) and uncomment the `hero-avatar` image at the top of the hero in `index.html` |
 | `assets/Jeremy_Mattathias_Mboe_CV.pdf` | CV download | Current copy of `CV_TERBARU.pdf`. Replace whenever the CV is updated |
 
 Two content values are worth revisiting as the work lands:

@@ -1,23 +1,34 @@
 /**
- * Secondary work, rendered as a compact grid.
- * Kept in one place so adding a repository is a single-object edit.
+ * Further projects, grouped by application area.
+ * Kept in one place so adding a project is a single-object edit.
+ * `repo` is optional: projects without a public repository render as plain cards.
  */
+export const AREAS = [
+  'Medical and clinical ML',
+  'Computer vision',
+  'Learning with scarce labels',
+  'Systems and serving',
+];
+
 export const REPOS = [
   {
-    name: 'Oil Palm Health Detection',
-    repo: 'Deteksi-dan-Klasifikasi-Kesehatan-Pohon-Sawit-Menggunakan-Deep-Learning-pada-Citra-Udara',
+    area: 'Medical and clinical ML',
+    name: 'TB Meningitis Mortality Stratification',
+    repo: 'TB_Meningitis',
     blurb:
-      'YOLOv8s detects individual trees in aerial imagery, then ResNet18 classifies each crop with NDVI masking applied first to sharpen the vegetation signal. Served through a Gradio app.',
-    tags: ['YOLOv8', 'ResNet18', 'NDVI', 'Gradio'],
+      'XGBoost model for early three-month mortality risk in tuberculous meningitis (AUROC 0.825), with an interpretable eight-feature logistic surrogate built from SHAP-selected predictors (AUROC 0.815). Presented as an e-poster at the ASEAN4TB Conference.',
+    tags: ['XGBoost', 'SHAP', 'Decision Curve Analysis'],
   },
   {
-    name: 'Flowchart Reader for Blind Learners',
-    repo: 'Object-Detection-for-Visually-Impaired-Education',
+    area: 'Medical and clinical ML',
+    name: 'Kidney Cyst Segmentation',
+    status: 'in progress',
     blurb:
-      'Object detection reads physical flowchart blocks a student lays out by hand, so programming logic can be checked without any visual feedback loop.',
-    tags: ['Object Detection', 'Assistive Tech'],
+      'Deep learning segmentation pipelines for kidney cysts, developed and evaluated with laboratory researchers and clinicians from Rumah Sakit Universitas Airlangga.',
+    tags: ['Segmentation', 'Medical Imaging'],
   },
   {
+    area: 'Medical and clinical ML',
     name: 'Medical Sound Classification',
     repo: 'Medical-Sound-Classification-using-Log-Mel-Spectrogram-and-MFCC-for-identifying-Asthma-and-COPD-',
     blurb:
@@ -25,41 +36,30 @@ export const REPOS = [
     tags: ['Log-Mel', 'MFCC', 'Audio'],
   },
   {
-    name: 'Semi-Supervised Food Classification',
-    repo: 'Klasifikasi-Makanan-Tradisional-Indonesia-dengan-Semi-Supervised-Learning-',
+    area: 'Computer vision',
+    name: 'Oil Palm Health Detection',
+    repo: 'Deteksi-dan-Klasifikasi-Kesehatan-Pohon-Sawit-Menggunakan-Deep-Learning-pada-Citra-Udara',
     blurb:
-      'Indonesian traditional food recognition trained where labels are scarce, using pseudo-labelling to pull unlabelled images into the training set.',
-    tags: ['Semi-Supervised', 'Pseudo-Labelling'],
+      'YOLOv8s detects individual trees in aerial imagery, then ResNet-18 classifies each crop with NDVI masking applied first to sharpen the vegetation signal. Served through a Gradio app on Hugging Face Spaces.',
+    tags: ['YOLOv8', 'ResNet-18', 'NDVI', 'Gradio'],
   },
   {
-    name: 'Pseudo-Labelling on Bank Transactions',
-    repo: 'Semi-Supervised-Learning-and-Pseudo-Labeling-on-Bank-Transactions-using-Clustering-Classification',
+    area: 'Computer vision',
+    name: 'CodeSight: Flowchart Reader for Blind Learners',
+    repo: 'Object-Detection-for-Visually-Impaired-Education',
     blurb:
-      'Clustering generates labels for an unlabelled transaction set, which a downstream classifier then learns from. Tests how far cluster quality carries the label quality.',
-    tags: ['Clustering', 'Classification'],
+      'YOLOv8 reads physical flowchart blocks that a student lays out by hand and translates them into executable code, so visually impaired students can learn programming logic by touch.',
+    tags: ['YOLOv8', 'Assistive Tech'],
   },
   {
-    name: 'Stress Classification, Pinball Loss',
-    repo: 'Stress-Level-Classification-with-Pinball-Loss',
+    area: 'Computer vision',
+    name: 'Tilapia Disease Classification',
     blurb:
-      'SVM with a flexible pinball loss instead of hinge, trading margin maximisation for noise robustness on student stress data.',
-    tags: ['SVM', 'Pinball Loss'],
+      'A custom CNN with a Convolutional Block Attention Module that detects fish diseases and classifies health status, for a digital village solution in tilapia farming. Top 50, Innovillage by Telkom Indonesia.',
+    tags: ['CNN', 'CBAM', 'Social Impact'],
   },
   {
-    name: 'EEG Binary Encoding',
-    repo: 'EEG_BinaryEncoding',
-    blurb:
-      'Feature extraction and encoding experiments behind the ALS screening pipeline, run across segmented EEG tasks and frequency subbands.',
-    tags: ['EEG', 'Signal Processing'],
-  },
-  {
-    name: 'TB Meningitis',
-    repo: 'TB_Meningitis',
-    blurb:
-      'Modelling work on tuberculous meningitis as part of the wider TB detection and diagnostic programme.',
-    tags: ['Medical ML'],
-  },
-  {
+    area: 'Computer vision',
     name: 'Waste Classification',
     repo: 'klasifikasi-sampah-abmas',
     blurb:
@@ -67,6 +67,38 @@ export const REPOS = [
     tags: ['Computer Vision', 'Deployment'],
   },
   {
+    area: 'Learning with scarce labels',
+    name: 'Semi-Supervised Food Classification',
+    repo: 'Klasifikasi-Makanan-Tradisional-Indonesia-dengan-Semi-Supervised-Learning-',
+    blurb:
+      'Indonesian traditional food recognition trained where labels are scarce, using pseudo-labelling to pull unlabelled images into the training set.',
+    tags: ['Semi-Supervised', 'Pseudo-Labelling'],
+  },
+  {
+    area: 'Learning with scarce labels',
+    name: 'Pseudo-Labelling on Bank Transactions',
+    repo: 'Semi-Supervised-Learning-and-Pseudo-Labeling-on-Bank-Transactions-using-Clustering-Classification',
+    blurb:
+      'Clustering generates labels for an unlabelled transaction set, which a downstream classifier then learns from. Tests how far cluster quality carries the label quality.',
+    tags: ['Clustering', 'Classification'],
+  },
+  {
+    area: 'Learning with scarce labels',
+    name: 'Stress Classification, Pinball Loss',
+    repo: 'Stress-Level-Classification-with-Pinball-Loss',
+    blurb:
+      'SVM with a flexible pinball loss instead of hinge, trading margin maximisation for noise robustness on student stress data.',
+    tags: ['SVM', 'Pinball Loss'],
+  },
+  {
+    area: 'Systems and serving',
+    name: 'REXTRA LLM Inference Backend',
+    blurb:
+      'REST API infrastructure for LLM inference with request routing, retries and failover across multiple model providers, plus connection handling tuned to cut end-to-end latency.',
+    tags: ['REST APIs', 'LLM Serving', 'Docker'],
+  },
+  {
+    area: 'Systems and serving',
     name: 'LLM Deployment Exercise',
     repo: 'KCV_Deployment_LLM',
     blurb:

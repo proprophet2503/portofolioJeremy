@@ -1,41 +1,35 @@
-/* Design tokens. Dark technical / lab-notebook direction. */
+/* Design tokens. Light, plain academic portfolio. */
 
 :root {
   /* Surfaces */
-  --bg: #08090b;
-  --bg-elev: #0e1013;
-  --bg-elev-2: #14171c;
-  --grid-line: rgba(255, 255, 255, 0.04);
-  --border: #1d2128;
-  --border-strong: #2b313b;
+  --bg: #ffffff;
+  --bg-band: #f1f2f3;
+  --bg-card: #ffffff;
+  --border: #dfe2e5;
+  --border-strong: #c4c9ce;
 
   /* Text */
-  --text: #e7eaf0;
-  --text-dim: #a2acbb;
-  --text-muted: #6f7a8a;
+  --text: #212529;
+  --text-dim: #495057;
+  --text-muted: #6c757d;
 
-  /* Accents */
-  --accent: #62d0ff;
-  --accent-dim: rgba(98, 208, 255, 0.14);
-  --accent-line: rgba(98, 208, 255, 0.35);
-  --accent-warm: #f5b544;
-  --accent-warm-dim: rgba(245, 181, 68, 0.14);
-  --accent-pink: #ff7ab6;
+  /* Accent: one colour, used for links and the primary action */
+  --accent: #186f8a;
+  --accent-hover: #11536a;
+  --accent-soft: #e6f1f4;
 
   /* Typography */
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-head: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  --text-xs: 0.72rem;
-  --text-sm: 0.82rem;
-  --text-base: clamp(0.94rem, 0.9rem + 0.18vw, 1.02rem);
-  --text-lg: clamp(1.08rem, 1rem + 0.4vw, 1.25rem);
-  --text-xl: clamp(1.35rem, 1.15rem + 0.9vw, 1.9rem);
-  --text-2xl: clamp(1.8rem, 1.4rem + 1.8vw, 3rem);
-  --text-hero: clamp(2.4rem, 1.4rem + 4.6vw, 5.4rem);
+  --text-sm: 0.9rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.2rem;
+  --text-xl: 1.45rem;
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+  --text-hero: clamp(2.4rem, 1.6rem + 3vw, 3.6rem);
 
-  --tracking-wide: 0.16em;
-  --leading-tight: 1.15;
+  --leading-tight: 1.2;
   --leading-body: 1.65;
 
   /* Space */
@@ -46,21 +40,16 @@
   --space-6: 1.5rem;
   --space-8: 2rem;
   --space-12: 3rem;
-  --space-16: 4rem;
-  --space-section: clamp(4.5rem, 3rem + 6vw, 9rem);
+  --space-section: clamp(3.5rem, 2.5rem + 4vw, 6rem);
 
   /* Shape */
-  --radius-sm: 4px;
-  --radius: 8px;
-  --radius-lg: 14px;
+  --radius: 4px;
 
   /* Motion */
-  --duration-fast: 160ms;
-  --duration: 320ms;
-  --duration-slow: 620ms;
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
 
   /* Layout */
-  --wrap: 1180px;
-  --wrap-narrow: 780px;
+  --wrap: 1080px;
+  --wrap-narrow: 800px;
+  --nav-height: 60px;
 }

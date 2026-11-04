@@ -3,14 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jeremy Mattathias Mboe | ML Engineer</title>
-<meta name="description" content="ML Engineer working on generative models, physics-informed inverse problems, and production inference. Diffusion and flow matching, spiking neural networks, medical imaging, and LLM serving." />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#ffffff" />
+<title>Jeremy Mattathias Mboe | ML Researcher and Engineer</title>
+<meta name="description" content="AI Engineering student at ITS working on physics-informed inverse problems for medical imaging, generative models for speech, spiking neural networks, and reliable inference backends." />
 <meta name="author" content="Jeremy Mattathias Mboe" />
 <link rel="canonical" href="https://proprophet2503.github.io/portofolioJeremy/" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Jeremy Mattathias Mboe | ML Engineer" />
-<meta property="og:description" content="Generative models, physics-informed inverse problems, and production inference." />
+<meta property="og:title" content="Jeremy Mattathias Mboe | ML Researcher and Engineer" />
+<meta property="og:description" content="Physics-informed inverse problems, generative models, medical AI and production inference." />
 <meta property="og:url" content="https://proprophet2503.github.io/portofolioJeremy/" />
 <!-- PLACEHOLDER: replace with a real 1200x630 social preview image -->
 <meta property="og:image" content="https://proprophet2503.github.io/portofolioJeremy/assets/placeholders/og-image.svg" />
@@ -21,24 +23,25 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/components.css" />
-<link rel="stylesheet" href="css/viz.css" />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Jeremy Mattathias Mboe",
-  "jobTitle": "ML Engineer",
+  "jobTitle": "AI Engineering Student and ML Researcher",
   "email": "mailto:jeremymattathiasmboe@gmail.com",
   "url": "https://proprophet2503.github.io/portofolioJeremy/",
   "sameAs": [
     "https://github.com/proprophet2503",
-    "https://linkedin.com/in/jeremymboe"
+    "https://linkedin.com/in/jeremymboe",
+    "https://www.kaggle.com/jeremymattathiasmboe",
+    "https://huggingface.co/jeremymboe"
   ],
   "alumniOf": "Institut Teknologi Sepuluh Nopember",
   "address": { "@type": "PostalAddress", "addressLocality": "Surabaya", "addressCountry": "ID" }
@@ -50,14 +53,17 @@
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="nav-mark" href="#top">JEREMY MBOE <span>/ ML ENGINEER</span></a>
+    <a class="nav-mark" href="#top">Jeremy Mboe</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle section menu" />
+    <label class="nav-burger" for="nav-toggle" aria-hidden="true">Menu</label>
     <nav class="nav-links" aria-label="Section navigation">
-      <a href="#focus">Focus</a>
-      <a href="#work">Work</a>
-      <a href="#more">More</a>
+      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#papers">Papers</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
+      <a href="assets/Jeremy_Mattathias_Mboe_CV.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
   </div>
 </header>
@@ -66,722 +72,524 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="hero-role">ML Engineer</span>
-      <h1 class="hero-name">Jeremy Mattathias<em>Mboe</em></h1>
-      <p class="hero-lede">
-        I build machine learning systems where the method is the hard part: generative
-        models with a defined transport path, inverse problems that need physics to be
-        well posed, and inference backends that have to stay up. Mostly PyTorch, mostly
-        written from the training loop upward.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">Selected work</a>
-        <a class="btn" href="assets/Jeremy_Mattathias_Mboe_CV.pdf" target="_blank" rel="noopener">Curriculum vitae</a>
-        <a class="btn" href="https://github.com/proprophet2503" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="btn" href="https://linkedin.com/in/jeremymboe" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-    </div>
-
-    <aside class="hero-panel reveal">
-      <div class="hero-panel-title">Current position</div>
-      <div class="stat-list">
-        <div class="stat-row">
-          <span class="stat-label">Study</span>
-          <span class="stat-value">BSc AI Engineering, <strong>ITS</strong></span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">GPA</span>
-          <span class="stat-value"><strong>3.86</strong> / 4.00</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">Lab</span>
-          <span class="stat-value">Intelligent Computing and Vision</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">Research</span>
-          <span class="stat-value">Diagnostic and Prognostic Lab</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">Base</span>
-          <span class="stat-value">Surabaya, Indonesia</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">Open to</span>
-          <span class="stat-value"><strong>Research and ML engineering roles</strong></span>
-        </div>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<!-- ============ FOCUS ============ -->
-<section class="section" id="focus">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-index">01</span>
-      <h2 class="section-title">What I work on</h2>
-      <p class="section-note">Three threads, one habit: implement the method from scratch before trusting a library wrapper around it.</p>
+    <!-- Optional photo: add assets/portrait.jpg and uncomment.
+    <img class="hero-avatar" src="assets/portrait.jpg" width="180" height="180" alt="Jeremy Mattathias Mboe" />
+    -->
+    <h1 class="hero-name">Jeremy Mattathias Mboe</h1>
+    <p class="hero-tagline">AI Engineering Student &middot; ML Researcher &middot; ITS Surabaya</p>
+    <p class="hero-lede">
+      I build machine learning systems where the method is the hard part:
+      physics-informed inverse problems for medical imaging, generative models for
+      speech, and inference backends that have to stay up. Mostly PyTorch, mostly
+      written from the training loop upward.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#about">Enter portfolio</a>
+      <a class="btn" href="assets/Jeremy_Mattathias_Mboe_CV.pdf" target="_blank" rel="noopener">Curriculum vitae</a>
+      <a class="btn" href="https://github.com/proprophet2503" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn" href="https://linkedin.com/in/jeremymboe" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
 
-    <div class="focus-grid">
-      <article class="focus-card reveal">
-        <span class="focus-num">/01</span>
-        <h3>Generative model geometry</h3>
-        <p>
-          Score-based diffusion, flow matching, and continuous normalizing flows. The
-          question I care about is what path the model takes from noise to data, and
-          what that path costs at sampling time.
-        </p>
-      </article>
-      <article class="focus-card reveal">
-        <span class="focus-num">/02</span>
-        <h3>Physics-informed inverse problems</h3>
-        <p>
-          Reconstruction from measurements that do not determine the answer on their
-          own. Encoding the forward physics into the loss is what makes an
-          underdetermined problem trainable at all.
-        </p>
-      </article>
-      <article class="focus-card reveal">
-        <span class="focus-num">/03</span>
-        <h3>Models that have to run</h3>
-        <p>
-          LLM inference backends, request routing and failover across providers, and
-          clinical pipelines that get handed to people who are not the person who
-          wrote them.
-        </p>
-      </article>
+    <div class="affil" aria-label="Affiliations and collaborators">
+      <span class="affil-label">Worked with</span>
+      <ul class="affil-list">
+        <li>Institut Teknologi Sepuluh Nopember</li>
+        <li>Diagnostic and Prognostic Lab</li>
+        <li>Intelligent Computing and Vision Lab</li>
+        <li>Pusat Studi Kecerdasan Artifisial ITS</li>
+        <li>Avalon AI</li>
+        <li>RISTEK UI</li>
+        <li>RS Universitas Airlangga</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ============ SELECTED WORK ============ -->
+<!-- ============ ABOUT ============ -->
+<section class="section band" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">About</h2>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <p class="lede">
+          I study Artificial Intelligence Engineering at Institut Teknologi Sepuluh
+          Nopember in Surabaya, Indonesia. Most of my research applies machine learning
+          to health: tuberculosis screening from cough audio, 3D lung reconstruction from
+          plain X-rays, EEG screening for ALS and kidney cyst segmentation.
+        </p>
+        <p>
+          Alongside the medical work I build generative models for speech, train spiking
+          neural networks without a framework, and have maintained the backend that serves
+          LLM inference for a production product. I also teach as a teaching assistant for
+          Probability and Statistics, Machine Learning and Data Mining.
+        </p>
+
+        <h3 class="sub-head">Research interests</h3>
+        <ul class="interests">
+          <li><b>Physics-informed inverse problems.</b> Reconstruction from measurements that do not determine the answer on their own. Encoding the forward physics into the loss is what makes an underdetermined problem trainable at all.</li>
+          <li><b>Generative model geometry.</b> Score-based diffusion, flow matching and continuous normalizing flows: what path the model takes from noise to data, and what that path costs at sampling time.</li>
+          <li><b>Models that have to run.</b> LLM inference backends, request routing and failover across providers, and clinical pipelines handed to people who did not write them.</li>
+        </ul>
+      </div>
+
+      <aside>
+        <h3 class="sub-head">Education</h3>
+        <div class="record">
+          <h4>BSc Artificial Intelligence Engineering</h4>
+          <p>Institut Teknologi Sepuluh Nopember, 08/2024 to present. GPA 3.86 / 4.00.</p>
+          <p>Coursework: probability and statistics, computational intelligence, data mining, machine learning, deep learning, natural language processing, digital image processing.</p>
+        </div>
+        <div class="record">
+          <h4>Dicoding Machine Learning and Deep Learning Developer</h4>
+          <p>Supervised and unsupervised learning, training and evaluation, preprocessing, and model deployment with TensorFlow.</p>
+        </div>
+
+        <h3 class="sub-head">Currently</h3>
+        <div class="record">
+          <p>Research at the Diagnostic and Prognostic Lab and the Intelligent Computing and Vision Lab, ITS.</p>
+          <p>Teaching assistant for Probability and Statistics, Machine Learning and Data Mining.</p>
+          <p><b>Open to research internships and ML roles.</b></p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="jump">
+      <h3>Learn more about my:</h3>
+      <div class="btn-row">
+        <a class="btn" href="#work">Projects</a>
+        <a class="btn" href="#papers">Papers</a>
+        <a class="btn" href="#experience">Experience</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn btn-primary" href="assets/Jeremy_Mattathias_Mboe_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECTS ============ -->
 <section class="section" id="work">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-index">02</span>
-      <h2 class="section-title">Selected work</h2>
-      <p class="section-note">Every figure below is a schematic of the method, drawn in the browser. They illustrate how the system works, not measured run output.</p>
+  <div class="wrap wrap-narrow">
+    <div class="section-head">
+      <span class="section-kicker">Portfolio</span>
+      <h2 class="section-title">Featured projects</h2>
     </div>
 
-    <!-- ---- 01 SwaraTTS ---- -->
-    <article class="project reveal" id="p01">
-      <header class="project-head">
-        <span class="project-id">01</span>
-        <div class="project-headings">
-          <h3 class="project-title">SwaraTTS: latent flow matching for speech</h3>
-          <div class="project-meta">
-            <span>Deep Learning Researcher</span>
-            <span>Avalon AI x RISTEK UI</span>
-            <span>02/2026 to present</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <span class="link-chip">Diffusion and Flow Matching Division</span>
-        </div>
-      </header>
+    <p>
+      Research and engineering projects where I did most of the modelling work. Each
+      card lists the highlights, the tags and a short summary of the problem and the
+      approach. Six featured projects come first:
+    </p>
+    <ul class="project-index">
+      <li><span>&#129729;</span><a href="#p01">Physics-informed 3D lung reconstruction from three X-rays</a></li>
+      <li><span>&#127897;&#65039;</span><a href="#p02">AVID-MM: speaker identity when a modality is missing</a></li>
+      <li><span>&#9889;</span><a href="#p03">Neuromorphic vision without an SNN framework</a></li>
+      <li><span>&#129658;</span><a href="#p04">TB cough screening from acoustics</a></li>
+      <li><span>&#128266;</span><a href="#p05">SwaraTTS: latent flow matching for speech</a></li>
+      <li><span>&#129504;</span><a href="#p06">EEG screening for ALS</a></li>
+    </ul>
+    <p>Further projects, grouped by application area, are <a href="#more">listed below</a>.</p>
 
-      <div class="project-body">
-        <div class="project-text">
-          <p class="project-summary">
-            A low-latency neural speech synthesiser built with a research team. The core
-            question is which generative paradigm gets acceptable audio in the fewest
-            solver steps, so the work sits on the trade-off between continuous
-            normalizing flows and diffusion.
-          </p>
+    <!-- ---- 01 PINN lung ---- -->
+    <article class="project" id="p01">
+      <h3 class="project-title">Physics-Informed 3D Lung Reconstruction</h3>
+      <p class="project-meta">Deep Learning Researcher &middot; Diagnostic and Prognostic Lab, ITS &middot; 04/2026 to present &middot; TB Active Case Finding programme</p>
 
-          <div class="split-block">
-            <h4>AI research</h4>
-            <ul>
-              <li>Implemented score-based diffusion and latent flow matching to shape the generative trajectory of speech.</li>
-              <li>Compared CNF against diffusion paradigms on sampling efficiency, since a straight probability path needs far fewer function evaluations than a curved stochastic one.</li>
-              <li>Worked in latent space rather than waveform space to keep the transport problem tractable.</li>
-            </ul>
-          </div>
+      <h4>Highlights</h4>
+      <ul>
+        <li>A coordinate network in the Neural Attenuation Field style represents the volume, instead of a discrete voxel grid.</li>
+        <li>The Beer-Lambert law is the forward operator, so the training loss is a physics residual against measured projections.</li>
+        <li>Ray sampling and line integrals run inside the training loop for AP, PA and lateral geometry.</li>
+      </ul>
+      <p class="facts"><b>Tags:</b> PINN, Neural Attenuation Fields, Beer-Lambert, sparse-view CT, PyTorch</p>
 
-          <div class="split-block eng">
-            <h4>Engineering</h4>
-            <ul>
-              <li>Training and sampling code in PyTorch, with the ODE solver step budget exposed as a tunable rather than baked in.</li>
-              <li>Coordinated across a multidisciplinary team, keeping the generative module swappable behind a fixed interface.</li>
-            </ul>
-          </div>
-
-          <div class="metric-strip">
-            <div class="metric"><b>CNF</b><small>vs diffusion</small></div>
-            <div class="metric"><b>Latent</b><small>space transport</small></div>
-            <div class="metric"><b>Low</b><small>latency target</small></div>
-          </div>
-
-          <div class="tech-row">
-            <span class="tech">PyTorch</span>
-            <span class="tech">Flow Matching</span>
-            <span class="tech">Score-Based Diffusion</span>
-            <span class="tech">CNF</span>
-            <span class="tech">Neural TTS</span>
-          </div>
-        </div>
-
-        <div class="viz-frame">
-          <div class="viz-caption">
-            <b>Figure 01</b>
-            <span>transport path, prior to speech latent</span>
-          </div>
-          <div class="viz-stage" data-viz="flow-matching" aria-label="Animated comparison of a flow matching trajectory against a diffusion trajectory from prior noise to a latent speech manifold"></div>
-          <div class="viz-controls">
-            <button class="viz-btn" type="button" data-value="flow" aria-pressed="true">Flow matching</button>
-            <button class="viz-btn" type="button" data-value="diffusion" aria-pressed="false">Reverse diffusion</button>
-          </div>
-          <p class="viz-readout"></p>
-        </div>
-      </div>
+      <h4>Summary</h4>
+      <p>
+        Reconstructing a 3D CT volume from three plain X-rays, so tuberculosis
+        screening does not require CT access. Three projections do not determine a
+        volume, so the forward physics has to carry the rest.
+      </p>
+      <p>
+        The next target is TB cavity segmentation on the reconstructed volume, which
+        is the clinically useful output. The work is part of a wider TB detection and
+        diagnostic programme.
+      </p>
     </article>
 
     <!-- ---- 02 AVID-MM ---- -->
-    <article class="project reveal" id="p02">
-      <header class="project-head">
-        <span class="project-id">02</span>
-        <div class="project-headings">
-          <h3 class="project-title">AVID-MM: identity under missing modality</h3>
-          <div class="project-meta">
-            <span>Lead Deep Learning Researcher</span>
-            <span>POLY-SIM 2026 Grand Challenge</span>
-            <span>04/2026 to present</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a class="link-chip" href="https://github.com/proprophet2503/AVID-MM-Audio-Visual-Identity-Disentanglement-for-Missing-Modality-Speaker-Identification" target="_blank" rel="noopener noreferrer">Repository</a>
-        </div>
-      </header>
+    <article class="project" id="p02">
+      <h3 class="project-title">AVID-MM: Identity Under Missing Modality</h3>
+      <p class="project-meta">Lead Deep Learning Researcher &middot; POLY-SIM 2026 Grand Challenge &middot; 04/2026 to 07/2026</p>
+      <p class="project-links"><a href="https://github.com/proprophet2503/AVID-MM-Audio-Visual-Identity-Disentanglement-for-Missing-Modality-Speaker-Identification" target="_blank" rel="noopener noreferrer">Repository on GitHub</a></p>
 
-      <div class="project-body">
-        <div class="project-text">
-          <p class="project-summary">
-            Cross-modal speaker verification that still works when a modality goes
-            missing. Real multilingual footage loses audio or loses the face, and a
-            system that only works on clean pairs is not deployable.
-          </p>
+      <h4>Highlights</h4>
+      <ul>
+        <li>ECAPA-TDNN voice embeddings and a pretrained face backbone, projected into one shared identity space.</li>
+        <li>Modality dropout during training, so the shared space stays aligned when either branch is absent at inference.</li>
+        <li>A dual-head AAM-Softmax objective keeps identity clusters separable across languages.</li>
+      </ul>
+      <p class="facts"><b>Tags:</b> ECAPA-TDNN, AAM-Softmax, modality dropout, multimodal, PyTorch</p>
+      <p class="facts"><b>Results:</b> POLY_1 accuracy from 59% to 93%+, validated in all three input states</p>
 
-          <div class="split-block">
-            <h4>AI research</h4>
-            <ul>
-              <li>Built a multimodal embedding pipeline: ECAPA-TDNN for voice, a pretrained face backbone for vision, projected into one shared identity space.</li>
-              <li>Trained with modality dropout so the shared space stays aligned when either branch is absent at inference.</li>
-              <li>Dual-head AAM-Softmax objective to keep identity clusters separable across languages.</li>
-            </ul>
-          </div>
-
-          <div class="split-block eng">
-            <h4>Engineering</h4>
-            <ul>
-              <li>Led the implementation, from data handling through the evaluation harness for the challenge setup.</li>
-              <li>Inference path validated under all three input states: both modalities, audio only, visual only.</li>
-            </ul>
-          </div>
-
-          <div class="metric-strip">
-            <div class="metric"><b>59% to 93%+</b><small>POLY_1 accuracy</small></div>
-            <div class="metric"><b>3</b><small>valid input states</small></div>
-          </div>
-
-          <div class="tech-row">
-            <span class="tech">ECAPA-TDNN</span>
-            <span class="tech">AAM-Softmax</span>
-            <span class="tech">Modality Dropout</span>
-            <span class="tech">Multimodal</span>
-            <span class="tech">PyTorch</span>
-          </div>
-        </div>
-
-        <div class="viz-frame">
-          <div class="viz-caption">
-            <b>Figure 02</b>
-            <span>forward path under each dropout state</span>
-          </div>
-          <div class="viz-stage" data-viz="modality-fusion" aria-label="Diagram of the audio and visual encoder branches feeding a shared fusion head, showing which branch stays active when a modality is dropped"></div>
-          <div class="viz-controls">
-            <button class="viz-btn" type="button" data-value="both" aria-pressed="true">Both</button>
-            <button class="viz-btn" type="button" data-value="audio" aria-pressed="false">Audio only</button>
-            <button class="viz-btn" type="button" data-value="visual" aria-pressed="false">Visual only</button>
-          </div>
-          <p class="viz-readout"></p>
-        </div>
-      </div>
+      <h4>Summary</h4>
+      <p>
+        Cross-modal speaker verification that still works when a modality goes
+        missing. Real multilingual footage loses the audio or loses the face, and a
+        system that only works on clean pairs is not deployable.
+      </p>
+      <p>
+        I led the implementation, from data handling to the evaluation harness for the
+        challenge setup, and validated inference in all three input states: both
+        modalities, audio only and visual only.
+      </p>
     </article>
 
-    <!-- ---- 03 PINN lung ---- -->
-    <article class="project reveal" id="p03">
-      <header class="project-head">
-        <span class="project-id">03</span>
-        <div class="project-headings">
-          <h3 class="project-title">Physics-informed 3D lung reconstruction</h3>
-          <div class="project-meta">
-            <span>Deep Learning Researcher</span>
-            <span>Diagnostic and Prognostic Lab</span>
-            <span>04/2026 to present</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <span class="link-chip">TB Active Case Finding programme</span>
-        </div>
-      </header>
+    <!-- ---- 03 SNN ---- -->
+    <article class="project" id="p03">
+      <h3 class="project-title">Neuromorphic Vision Without an SNN Framework</h3>
+      <p class="project-meta">Research Assistant &middot; Avalon AI &middot; 04/2026 to 06/2026</p>
 
-      <div class="project-body">
-        <div class="project-text">
-          <p class="project-summary">
-            Reconstructing a 3D CT volume from three plain X-rays, so tuberculosis
-            screening does not require CT access. Three projections do not determine a
-            volume, so the forward physics has to carry the rest.
-          </p>
+      <h4>Highlights</h4>
+      <ul>
+        <li>Izhikevich neuron dynamics with temporal encoding for event-based image classification.</li>
+        <li>Custom surrogate gradients in the backward pass make the non-differentiable spiking nonlinearity trainable.</li>
+        <li>The full stack is written from scratch: temporal encoders, spike-based layers and autograd functions, with no SNN library.</li>
+      </ul>
+      <p class="facts"><b>Tags:</b> spiking neural networks, surrogate gradients, Izhikevich, custom autograd, PyTorch</p>
+      <p class="facts"><b>Results:</b> 76.6% accuracy on N-MNIST, with no SNN library</p>
 
-          <div class="split-block">
-            <h4>AI research</h4>
-            <ul>
-              <li>Parameterised the attenuation field with a coordinate network in the Neural Attenuation Field style, rather than a discrete voxel grid.</li>
-              <li>Encoded the Beer-Lambert law as the forward operator, so the training loss is a physics residual against measured projections.</li>
-              <li>Targeting TB cavity segmentation on the reconstructed volume, which is the clinically useful output.</li>
-            </ul>
-          </div>
-
-          <div class="split-block eng">
-            <h4>Engineering</h4>
-            <ul>
-              <li>Ray sampling and line-integral computation written to run inside the training loop for triplanar AP, PA, and lateral geometry.</li>
-              <li>Built as part of a wider clinical detection and diagnostic pipeline, alongside clinicians at Rumah Sakit Universitas Airlangga.</li>
-            </ul>
-          </div>
-
-          <div class="metric-strip">
-            <div class="metric"><b>3</b><small>input views</small></div>
-            <div class="metric"><b>Ill-posed</b><small>inverse problem</small></div>
-            <div class="metric"><b>PINN</b><small>+ NAF</small></div>
-          </div>
-
-          <div class="tech-row">
-            <span class="tech">PINN</span>
-            <span class="tech">Neural Attenuation Fields</span>
-            <span class="tech">Beer-Lambert</span>
-            <span class="tech">Sparse-View CT</span>
-            <span class="tech">PyTorch</span>
-          </div>
-        </div>
-
-        <div class="viz-frame">
-          <div class="viz-caption">
-            <b>Figure 03</b>
-            <span>ray integration against a measured profile</span>
-          </div>
-          <div class="viz-stage" data-viz="beer-lambert" aria-label="Diagram of X-ray fans passing through a thorax phantom, with the resulting Beer-Lambert detector profile plotted below"></div>
-          <div class="viz-controls">
-            <button class="viz-btn" type="button" data-value="AP" aria-pressed="true">AP view</button>
-            <button class="viz-btn" type="button" data-value="PA" aria-pressed="false">PA view</button>
-            <button class="viz-btn" type="button" data-value="LAT" aria-pressed="false">Lateral</button>
-          </div>
-          <p class="viz-readout"></p>
-        </div>
-      </div>
+      <h4>Summary</h4>
+      <p>
+        A spiking network trained end to end with nothing but PyTorch autograd. The
+        spike function has zero derivative almost everywhere, so the whole problem is
+        constructing a gradient path that does not exist by default.
+      </p>
+      <p>
+        The surrogate choice is pluggable, so the backward pass can be swapped without
+        touching the forward model. The from-scratch pipeline reached 76.6% accuracy
+        on N-MNIST.
+      </p>
     </article>
 
-    <!-- ---- 04 SNN ---- -->
-    <article class="project reveal" id="p04">
-      <header class="project-head">
-        <span class="project-id">04</span>
-        <div class="project-headings">
-          <h3 class="project-title">Neuromorphic vision, no SNN framework</h3>
-          <div class="project-meta">
-            <span>Research Assistant</span>
-            <span>Avalon AI</span>
-            <span>04/2026 to present</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <span class="link-chip">N-MNIST</span>
-        </div>
-      </header>
+    <!-- ---- 04 TB cough ---- -->
+    <article class="project" id="p04">
+      <h3 class="project-title">TB Cough Screening From Acoustics</h3>
+      <p class="project-meta">Machine Learning Developer &middot; Diagnostic and Prognostic Lab, ITS &middot; 08/2025 to present</p>
+      <p class="project-links"><a href="https://github.com/proprophet2503/TB-Cough-Detection-Model" target="_blank" rel="noopener noreferrer">Repository on GitHub</a></p>
 
-      <div class="project-body">
-        <div class="project-text">
-          <p class="project-summary">
-            A spiking network trained end to end with nothing but PyTorch autograd. The
-            spike function has zero derivative almost everywhere, so the entire problem
-            is constructing a gradient path that does not exist by default.
-          </p>
+      <h4>Highlights</h4>
+      <ul>
+        <li>Energy-based segmentation cuts each cough out of a noisy recording before any feature is computed.</li>
+        <li>13 MFCCs with delta and delta-delta coefficients, 39 features per frame from 40 mel bands.</li>
+        <li>A two-layer LSTM reads the frame sequence, so the decision uses the temporal shape of the cough.</li>
+      </ul>
+      <p class="facts"><b>Tags:</b> LSTM, MFCC, signal processing, PyTorch</p>
+      <p class="facts"><b>Results:</b> F1 0.89 on 449 held-out recordings; 1st Place and Best Scientific Paper, National Electrolympic UPNVJ 2025</p>
 
-          <div class="split-block">
-            <h4>AI research</h4>
-            <ul>
-              <li>Izhikevich neuron dynamics with temporal encoding for event-based image classification.</li>
-              <li>Custom surrogate gradient functions substituted into the backward pass so the non-differentiable spiking nonlinearity becomes trainable.</li>
-              <li>Reached 76.6% accuracy on N-MNIST with the from-scratch pipeline.</li>
-            </ul>
-          </div>
-
-          <div class="split-block eng">
-            <h4>Engineering</h4>
-            <ul>
-              <li>Wrote the full training stack: temporal encoders, spike-based layers, and custom autograd functions, with no external SNN library.</li>
-              <li>Kept the surrogate choice pluggable so the backward pass can be swapped without touching the forward model.</li>
-            </ul>
-          </div>
-
-          <div class="metric-strip">
-            <div class="metric"><b>76.6%</b><small>N-MNIST accuracy</small></div>
-            <div class="metric"><b>0</b><small>SNN libraries used</small></div>
-            <div class="metric"><b>Custom</b><small>autograd path</small></div>
-          </div>
-
-          <div class="tech-row">
-            <span class="tech">Spiking Neural Networks</span>
-            <span class="tech">Surrogate Gradients</span>
-            <span class="tech">Izhikevich</span>
-            <span class="tech">Custom Autograd</span>
-            <span class="tech">PyTorch</span>
-          </div>
-        </div>
-
-        <div class="viz-frame">
-          <div class="viz-caption">
-            <b>Figure 04</b>
-            <span>membrane dynamics and the backward pass</span>
-          </div>
-          <div class="viz-stage" data-viz="spiking" aria-label="Spike raster and membrane potential trace beside the derivative that backpropagation receives under a Heaviside step versus a surrogate gradient"></div>
-          <div class="viz-controls">
-            <button class="viz-btn" type="button" data-value="surrogate" aria-pressed="true">Surrogate gradient</button>
-            <button class="viz-btn" type="button" data-value="heaviside" aria-pressed="false">True derivative</button>
-          </div>
-          <p class="viz-readout"></p>
-        </div>
-      </div>
+      <h4>Summary</h4>
+      <p>
+        A screening tool that classifies cough audio for TB indication, built for
+        settings where a lab test is the bottleneck. It is positioned as triage, not
+        diagnosis: the output is a referral signal.
+      </p>
+      <p>
+        Trained on 2,244 recordings from two datasets. The best configuration reached
+        about 90% accuracy and an F1-score of 0.89 on 449 held-out recordings. The
+        methodology won 1st Place and Best Scientific Paper at the National
+        Electrolympic UPNVJ 2025.
+      </p>
     </article>
 
-    <!-- ---- 05 TB cough ---- -->
-    <article class="project reveal" id="p05">
-      <header class="project-head">
-        <span class="project-id">05</span>
-        <div class="project-headings">
-          <h3 class="project-title">TB cough screening from acoustics</h3>
-          <div class="project-meta">
-            <span>Machine Learning Developer</span>
-            <span>Multimodal TB Diagnostic System</span>
-            <span>08/2025 to present</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a class="link-chip" href="https://github.com/proprophet2503/TB-Cough-Detection-Model" target="_blank" rel="noopener noreferrer">Repository</a>
-          <span class="link-chip">1st place, National Electrolympic UPNVJ</span>
-        </div>
-      </header>
+    <!-- ---- 05 SwaraTTS ---- -->
+    <article class="project" id="p05">
+      <h3 class="project-title">SwaraTTS: Latent Flow Matching for Speech</h3>
+      <p class="project-meta">Deep Learning Researcher &middot; Avalon AI x RISTEK UI, Diffusion and Flow Matching Division &middot; 02/2026 to present</p>
 
-      <div class="project-body">
-        <div class="project-text">
-          <p class="project-summary">
-            A screening tool that classifies cough audio for TB indication. Built for
-            settings where a lab test is the bottleneck, so the model has to run on
-            recordings people can actually produce.
-          </p>
+      <h4>Highlights</h4>
+      <ul>
+        <li>Score-based diffusion and latent flow matching shape the generative trajectory of speech.</li>
+        <li>Continuous normalizing flows compared against diffusion on sampling efficiency, since a straight path needs far fewer function evaluations than a curved stochastic one.</li>
+        <li>The ODE solver step budget is exposed as a tunable in the PyTorch sampling code, rather than baked in.</li>
+      </ul>
+      <p class="facts"><b>Tags:</b> flow matching, score-based diffusion, CNF, neural TTS, PyTorch</p>
 
-          <div class="split-block">
-            <h4>AI research</h4>
-            <ul>
-              <li>Acoustic front end on MFCC and log-mel features, framed at 25 ms with a 10 ms hop.</li>
-              <li>LSTM over the frame sequence, so the decision uses the temporal shape of the cough rather than a single pooled frame.</li>
-              <li>Presented the methodology to an academic expert panel, which is where the scientific paper award came from.</li>
-            </ul>
-          </div>
-
-          <div class="split-block eng">
-            <h4>Engineering</h4>
-            <ul>
-              <li>End-to-end path from raw audio through feature extraction to a class posterior, deployed for clinical-environment screening.</li>
-              <li>Positioned explicitly as triage, not diagnosis, with the output framed as a referral signal.</li>
-            </ul>
-          </div>
-
-          <div class="metric-strip">
-            <div class="metric"><b>1st</b><small>National Electrolympic</small></div>
-            <div class="metric"><b>Best paper</b><small>scientific award</small></div>
-            <div class="metric"><b>LSTM</b><small>+ MFCC</small></div>
-          </div>
-
-          <div class="tech-row">
-            <span class="tech">LSTM</span>
-            <span class="tech">MFCC</span>
-            <span class="tech">Log-Mel</span>
-            <span class="tech">Signal Processing</span>
-            <span class="tech">TensorFlow</span>
-          </div>
-        </div>
-
-        <div class="viz-frame">
-          <div class="viz-caption">
-            <b>Figure 05</b>
-            <span>acoustic front end into a recurrent classifier</span>
-          </div>
-          <div class="viz-stage" data-viz="cough-lstm" aria-label="Log-mel spectrogram consumed frame by frame by an unrolled LSTM, with the class posterior settling as evidence accumulates"></div>
-          <div class="viz-controls">
-            <button class="viz-btn" type="button" data-value="tb" aria-pressed="true">TB-suggestive clip</button>
-            <button class="viz-btn" type="button" data-value="healthy" aria-pressed="false">Non-TB clip</button>
-          </div>
-          <p class="viz-readout"></p>
-        </div>
-      </div>
+      <h4>Summary</h4>
+      <p>
+        A low-latency neural speech synthesiser built with a research team. The core
+        question is which generative paradigm gets acceptable audio in the fewest
+        solver steps.
+      </p>
+      <p>
+        The work happens in latent space rather than waveform space to keep the
+        transport problem tractable, and the generative module stays swappable behind a
+        fixed interface so the team can compare methods.
+      </p>
     </article>
 
     <!-- ---- 06 EEG ---- -->
-    <article class="project reveal" id="p06">
-      <header class="project-head">
-        <span class="project-id">06</span>
-        <div class="project-headings">
-          <h3 class="project-title">EEG screening for ALS</h3>
-          <div class="project-meta">
-            <span>AI Researcher</span>
-            <span>Pusat Studi Kecerdasan Artifisial, ITS</span>
-            <span>01/2026 to present</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a class="link-chip" href="https://github.com/proprophet2503/EEG_BinaryEncoding" target="_blank" rel="noopener noreferrer">Repository</a>
-        </div>
-      </header>
+    <article class="project" id="p06">
+      <h3 class="project-title">EEG Screening for ALS</h3>
+      <p class="project-meta">AI Researcher &middot; Pusat Studi Kecerdasan Artifisial, ITS &middot; 01/2026 to present</p>
+      <p class="project-links"><a href="https://github.com/proprophet2503/EEG_BinaryEncoding" target="_blank" rel="noopener noreferrer">Repository on GitHub</a></p>
 
-      <div class="project-body">
-        <div class="project-text">
-          <p class="project-summary">
-            An end-to-end signal pipeline separating ALS subjects from controls across
-            1,809 clinical EDF recordings. Most of the work is in the feature stage:
-            what you extract per band and per task decides what the classifier can see.
-          </p>
+      <h4>Highlights</h4>
+      <ul>
+        <li>Recordings segmented by task: resting, thinking and typing.</li>
+        <li>Mean absolute value, variance and standard deviation computed per subband, from delta through gamma.</li>
+        <li>A backend processing pipeline built for a team of four, so the signal scripts run inside a working web application.</li>
+      </ul>
+      <p class="facts"><b>Tags:</b> EEG, EDF, feature engineering, scikit-learn, Python</p>
 
-          <div class="split-block">
-            <h4>AI research</h4>
-            <ul>
-              <li>Feature extraction per segmented task (resting, thinking, typing) across delta through gamma subbands.</li>
-              <li>Time-domain descriptors computed per band: mean absolute value, variance, and standard deviation.</li>
-              <li>Trained and evaluated classifiers on the resulting feature matrix for diagnostic support.</li>
-            </ul>
-          </div>
-
-          <div class="split-block eng">
-            <h4>Engineering</h4>
-            <ul>
-              <li>Preprocessing across specific channels, frequency bands, and subbands, run over the full EDF corpus.</li>
-              <li>Built the backend processing pipeline for a team of four so the signal scripts drop into a working web application.</li>
-            </ul>
-          </div>
-
-          <div class="metric-strip">
-            <div class="metric"><b>1,809</b><small>EDF recordings</small></div>
-            <div class="metric"><b>5</b><small>frequency subbands</small></div>
-            <div class="metric"><b>3</b><small>task segments</small></div>
-          </div>
-
-          <div class="tech-row">
-            <span class="tech">EEG</span>
-            <span class="tech">EDF</span>
-            <span class="tech">Feature Engineering</span>
-            <span class="tech">Scikit-Learn</span>
-            <span class="tech">Python</span>
-          </div>
-        </div>
-
-        <div class="viz-frame">
-          <div class="viz-caption">
-            <b>Figure 06</b>
-            <span>subband decomposition and extracted features</span>
-          </div>
-          <div class="viz-stage" data-viz="eeg-subbands" aria-label="An EEG channel decomposed into delta through gamma subbands, with mean absolute value, variance, and standard deviation bars computed for each band"></div>
-          <div class="viz-controls">
-            <button class="viz-btn" type="button" data-value="resting" aria-pressed="true">Resting</button>
-            <button class="viz-btn" type="button" data-value="thinking" aria-pressed="false">Thinking</button>
-            <button class="viz-btn" type="button" data-value="typing" aria-pressed="false">Typing</button>
-          </div>
-          <p class="viz-readout"></p>
-        </div>
-      </div>
+      <h4>Summary</h4>
+      <p>
+        An end-to-end signal pipeline that separates ALS subjects from controls across
+        1,809 clinical EDF recordings. Most of the work is in the feature stage: what
+        you extract per band and per task decides what the classifier can see.
+      </p>
+      <p>
+        Classifiers trained on the resulting feature matrix provide diagnostic
+        support, with preprocessing run over specific channels, bands and subbands of
+        the full EDF corpus.
+      </p>
     </article>
   </div>
 </section>
 
-<!-- ============ MORE WORK ============ -->
-<section class="section" id="more">
+<!-- ============ FURTHER PROJECTS ============ -->
+<section class="section band" id="more">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-index">03</span>
-      <h2 class="section-title">Other work</h2>
-      <p class="section-note">Applied models, coursework taken further than required, and deployment exercises.</p>
+    <div class="section-head">
+      <h2 class="section-title">Further projects</h2>
+      <p class="section-note">More projects, grouped by application area. Projects marked [code] link to their repository on GitHub.</p>
     </div>
-    <div class="repo-grid reveal" id="repo-grid"></div>
+    <div id="repo-grid"></div>
+    <div class="more-cta">
+      <p>To see everything else, including coursework and experiments:</p>
+      <a class="btn btn-primary" href="https://github.com/proprophet2503?tab=repositories" target="_blank" rel="noopener noreferrer">Visit my GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAPERS AND AWARDS ============ -->
+<section class="section" id="papers">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Papers, presentations and awards</h2>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 class="sub-head">Presentations</h3>
+        <div class="paper">
+          <span class="paper-venue">e-Poster &middot; ASEAN4TB Conference &middot; 07/2026</span>
+          <h4>Three-month mortality stratification in tuberculous meningitis</h4>
+          <p>Primary author and presenter, with co-authors from the ITS Departments of Informatics Engineering and Medical Technology.</p>
+          <p>An XGBoost model reached an AUROC of 0.825. An interpretable eight-feature logistic regression surrogate built from SHAP-selected predictors reached 0.815, and decision curve analysis showed net benefit across threshold probabilities from 3 to 25 percent.</p>
+        </div>
+        <div class="paper">
+          <span class="paper-venue">Competition paper &middot; National Electrolympic UPNVJ &middot; 12/2025</span>
+          <h4>TB cough detection with an acoustic LSTM</h4>
+          <p>Paper and presentation of the TB cough screening system to a panel of academic experts. Awarded 1st Place and Best Scientific Paper. See the <a href="#p04">project card</a>.</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="sub-head">Awards</h3>
+        <div class="paper">
+          <h4>1st Place and Best Scientific Paper</h4>
+          <p>National Electrolympic, Universitas Pembangunan Nasional Veteran Jakarta, 2025. For the research and paper presentation of the TB cough detection system.</p>
+        </div>
+        <div class="paper">
+          <h4>Top 50, Innovillage Social Project Program</h4>
+          <p>Innovillage, Telkom Indonesia. For the tilapia disease classification project.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============ EXPERIENCE ============ -->
-<section class="section" id="experience">
+<section class="section band" id="experience">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-index">04</span>
-      <h2 class="section-title">Experience</h2>
+    <div class="section-head">
+      <h2 class="section-title">Timeline</h2>
+      <p class="section-note">A short summary of my research and work experience.</p>
     </div>
 
-    <div class="timeline reveal">
-      <div class="tl-item">
-        <h3 class="tl-role">Laboratory Assistant</h3>
-        <p class="tl-org">Intelligent Computing and Vision Laboratory, ITS</p>
-        <p class="tl-when">05/2026 to present, Surabaya</p>
-        <ul>
-          <li>Medical AI research with faculty and clinicians from Rumah Sakit Universitas Airlangga, on deep learning segmentation pipelines for kidney cyst detection.</li>
-          <li>Build practicum modules and teaching material for Machine Learning, Data Mining, and computational intelligence courses.</li>
-        </ul>
-      </div>
+    <ol class="timeline">
+      <li class="tl-item">
+        <div class="tl-panel">
+          <h5 class="tl-when">05/2026 to present &middot; Surabaya</h5>
+          <h4 class="tl-role">Laboratory Assistant</h4>
+          <p class="tl-org">Intelligent Computing and Vision Laboratory, ITS</p>
+          <ul>
+            <li>Medical AI research with laboratory researchers, faculty and clinicians from Rumah Sakit Universitas Airlangga, on deep learning segmentation pipelines for kidney cysts.</li>
+            <li>Build practicum modules and teaching material for Machine Learning, Data Mining and computational intelligence courses.</li>
+          </ul>
+        </div>
+      </li>
 
-      <div class="tl-item">
-        <h3 class="tl-role">Research Assistant, AI Division</h3>
-        <p class="tl-org">Diagnostic and Prognostic Laboratory</p>
-        <p class="tl-when">02/2026 to present, Surabaya</p>
-        <ul>
-          <li>3D CT reconstruction from triplanar X-rays using physics-informed neural networks for underdetermined inverse problems in TB imaging.</li>
-          <li>Automated TB cough diagnostic system on LSTM architectures with acoustic feature extraction, for clinical screening.</li>
-        </ul>
-      </div>
+      <li class="tl-item">
+        <div class="tl-panel">
+          <h5 class="tl-when">02/2026 to present &middot; Surabaya</h5>
+          <h4 class="tl-role">Research Assistant, AI Division</h4>
+          <p class="tl-org">Diagnostic and Prognostic Laboratory, ITS</p>
+          <ul>
+            <li>3D CT reconstruction from triplanar X-rays with physics-informed neural networks, for underdetermined inverse problems in TB imaging.</li>
+            <li>TB cough screening system built on an LSTM over acoustic features.</li>
+          </ul>
+        </div>
+      </li>
 
-      <div class="tl-item">
-        <h3 class="tl-role">Backend AI Engineer</h3>
-        <p class="tl-org">REXTRA, LLM inference backend</p>
-        <p class="tl-when">03/2025 to 02/2026</p>
-        <ul>
-          <li>Built and maintained the REST infrastructure serving LLM inference, covering request routing, retries, and failover across multiple external model providers.</li>
-          <li>Optimised request handling and connection management between backend services and provider APIs to cut end-to-end inference latency.</li>
-        </ul>
-      </div>
+      <li class="tl-item">
+        <div class="tl-panel">
+          <h5 class="tl-when">02/2026 to present &middot; Surabaya</h5>
+          <h4 class="tl-role">Teaching Assistant</h4>
+          <p class="tl-org">Department of Informatics Engineering, ITS</p>
+          <ul>
+            <li>Tutorials and practicum sessions for Probability and Statistics, Machine Learning and Data Mining.</li>
+            <li>Guide students through statistical inference, preprocessing, supervised and unsupervised learning, model evaluation and exploratory data analysis, and review their assignments and projects.</li>
+          </ul>
+        </div>
+      </li>
 
-      <div class="tl-item">
-        <h3 class="tl-role">Teaching Assistant, Probability and Statistics</h3>
-        <p class="tl-org">Department of Informatics Engineering, ITS</p>
-        <p class="tl-when">02/2026 to present, Surabaya</p>
-        <ul>
-          <li>Support student learning in probability theory, statistical inference, and stochastic processes.</li>
-        </ul>
-      </div>
+      <li class="tl-item">
+        <div class="tl-panel">
+          <h5 class="tl-when">01/2026 to 02/2026 &middot; Surabaya</h5>
+          <h4 class="tl-role">Software Developer Intern</h4>
+          <p class="tl-org">Pusat Studi Kecerdasan Artifisial dan Teknologi Digital, ITS</p>
+          <ul>
+            <li>EEG preprocessing and multi-dimensional feature extraction across channels, frequency bands and subbands.</li>
+            <li>Developed and evaluated classifiers that interpret EEG patterns for diagnostic support.</li>
+          </ul>
+        </div>
+      </li>
 
-      <div class="tl-item">
-        <h3 class="tl-role">Software Developer Intern</h3>
-        <p class="tl-org">Pusat Studi Kecerdasan Artifisial dan Teknologi Digital, ITS</p>
-        <p class="tl-when">01/2026 to 02/2026, Surabaya</p>
-        <ul>
-          <li>EEG preprocessing and multi-dimensional feature extraction across channels, frequency bands, and subbands.</li>
-          <li>Engineered the backend processing pipeline for a team of four, integrating signal processing scripts into a working web application.</li>
-        </ul>
-      </div>
+      <li class="tl-item">
+        <div class="tl-panel">
+          <h5 class="tl-when">11/2025 to present &middot; Surabaya</h5>
+          <h4 class="tl-role">Computer Vision Specialist</h4>
+          <p class="tl-org">Avalon AI Group</p>
+          <ul>
+            <li>Specialised computer vision training, working through current architectures and their implementation strategies.</li>
+          </ul>
+        </div>
+      </li>
 
-      <div class="tl-item">
-        <h3 class="tl-role">Computer Vision Specialist</h3>
-        <p class="tl-org">Avalon AI Group</p>
-        <p class="tl-when">11/2025 to present, Surabaya</p>
-        <ul>
-          <li>Specialised computer vision training, working through current architectures and their implementation strategies.</li>
-        </ul>
-      </div>
-    </div>
+      <li class="tl-item">
+        <div class="tl-panel">
+          <h5 class="tl-when">03/2025 to 02/2026</h5>
+          <h4 class="tl-role">Backend AI Engineer</h4>
+          <p class="tl-org">REXTRA, LLM inference backend</p>
+          <ul>
+            <li>Built and maintained the REST infrastructure serving LLM inference, covering request routing, retries and failover across multiple model providers.</li>
+            <li>Improved request and connection handling between backend services and provider APIs to cut end-to-end inference latency.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="tl-item">
+        <div class="tl-panel">
+          <h5 class="tl-when">09/2024 to 11/2024 &middot; Surabaya</h5>
+          <h4 class="tl-role">Programming Division Intern</h4>
+          <p class="tl-org">IRIS ITS robotics team</p>
+          <ul>
+            <li>C++ and OpenCV for computer vision, and C++ with the Robot Operating System (ROS) to control robot movement.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
 <!-- ============ SKILLS ============ -->
 <section class="section" id="skills">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-index">05</span>
-      <h2 class="section-title">Skills and foundations</h2>
+    <div class="section-head">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-note">Each skill links to the work where I used it.</p>
     </div>
 
-    <div class="skill-grid reveal">
-      <div class="skill-group">
-        <h3>AI and machine learning</h3>
-        <ul>
-          <span class="tech">PyTorch, from-scratch training loops</span>
-          <span class="tech">Custom autograd and surrogate gradients</span>
-          <span class="tech">Score-Based Diffusion</span>
-          <span class="tech">Flow Matching and CNF</span>
-          <span class="tech">Physics-Informed Neural Networks</span>
-          <span class="tech">Spiking Neural Networks</span>
-          <span class="tech">LLM Inference and Serving</span>
-          <span class="tech">Scikit-Learn</span>
-          <span class="tech">TensorFlow</span>
-        </ul>
+    <div class="skill-grid">
+      <div class="skill-item">
+        <h4>Deep learning research in PyTorch</h4>
+        <p>
+          Models written from the training loop upward: custom autograd and surrogate
+          gradients for the <a href="#p03">spiking network</a>, a Beer-Lambert forward
+          model for <a href="#p01">lung reconstruction</a>, and flow matching for
+          <a href="#p05">SwaraTTS</a>. Also TensorFlow and Hugging Face.
+        </p>
       </div>
-
-      <div class="skill-group">
-        <h3>Mathematical foundations</h3>
-        <ul>
-          <span class="tech">Linear Algebra</span>
-          <span class="tech">Probability and Stochastic Processes</span>
-          <span class="tech">Stochastic Differential Equations</span>
-          <span class="tech">Optimal Transport</span>
-          <span class="tech">Variational Inference</span>
-          <span class="tech">Inverse Problems</span>
-        </ul>
+      <div class="skill-item">
+        <h4>Audio and biosignal processing</h4>
+        <p>
+          MFCC front ends for <a href="#p04">TB cough screening</a>, subband features
+          from clinical EDF files for <a href="#p06">ALS screening</a>, and ECAPA-TDNN
+          voice embeddings for <a href="#p02">AVID-MM</a>.
+        </p>
       </div>
-
-      <div class="skill-group">
-        <h3>Languages and tooling</h3>
-        <ul>
-          <span class="tech">Python</span>
-          <span class="tech">C++</span>
-          <span class="tech">JavaScript</span>
-          <span class="tech">SQL, PostgreSQL</span>
-          <span class="tech">REST API design</span>
-          <span class="tech">English, professional</span>
-          <span class="tech">Indonesian, native</span>
-        </ul>
+      <div class="skill-item">
+        <h4>Computer vision</h4>
+        <p>
+          YOLOv8 and ResNet-18 with NDVI masking for oil palm health, a CBAM-attention
+          CNN for tilapia disease, YOLOv8 for the CodeSight flowchart reader, kidney cyst
+          segmentation, and C++ with OpenCV at IRIS ITS. <a href="#more">See further projects</a>.
+        </p>
+      </div>
+      <div class="skill-item">
+        <h4>Clinical ML and interpretability</h4>
+        <p>
+          XGBoost with SHAP feature selection, interpretable logistic surrogates and
+          decision curve analysis for <a href="#papers">tuberculous meningitis</a>,
+          evaluated with AUROC and clinical net benefit rather than accuracy alone.
+        </p>
+      </div>
+      <div class="skill-item">
+        <h4>Serving and backend</h4>
+        <p>
+          REST APIs for LLM inference with routing, retries and failover at REXTRA, plus
+          Docker, Linux, PostgreSQL and Git for everyday engineering.
+        </p>
+      </div>
+      <div class="skill-item">
+        <h4>Mathematics and teaching</h4>
+        <p>
+          Linear algebra, probability and stochastic processes, SDEs, optimal transport,
+          variational inference and inverse problems. I teach statistical inference and
+          machine learning as a teaching assistant.
+        </p>
       </div>
     </div>
 
-    <div class="two-col reveal" style="margin-top: var(--space-12)">
-      <div>
-        <h3 class="eyebrow" style="margin-bottom: var(--space-4)">Awards</h3>
-        <div class="record">
-          <h3>1st Place and Best Scientific Paper</h3>
-          <p>National Electrolympic, Universitas Pembangunan Nasional Veteran Jakarta, 2025. For the research and paper presentation of the TB cough detection system.</p>
-        </div>
-        <div class="record">
-          <h3>Top 50, Innovillage Social Project Program</h3>
-          <p>Innovillage, Telkom Indonesia, 2025.</p>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="eyebrow" style="margin-bottom: var(--space-4)">Education and certification</h3>
-        <div class="record">
-          <h3>BSc Artificial Intelligence Engineering</h3>
-          <p>Institut Teknologi Sepuluh Nopember, 08/2024 to present. GPA 3.86 of 4.00. Coursework in probability and statistics, computational intelligence, data mining, machine learning, deep learning, NLP, and digital image processing.</p>
-        </div>
-        <div class="record">
-          <h3>Dicoding Machine Learning and Deep Learning Developer</h3>
-          <p>Supervised and unsupervised learning, training and evaluation, preprocessing, and model deployment with TensorFlow.</p>
-        </div>
-      </div>
+    <div class="skill-summary">
+      <p><b>Languages:</b> Python, C++, JavaScript, SQL</p>
+      <p><b>Tools:</b> PyTorch, TensorFlow, Hugging Face, Scikit-Learn, Docker, Linux, PostgreSQL, Git</p>
+      <p><b>Spoken:</b> English (professional), Indonesian (native)</p>
     </div>
   </div>
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="section contact" id="contact">
+<section class="section band contact" id="contact">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-index">06</span>
+    <div class="section-head">
       <h2 class="section-title">Contact</h2>
     </div>
-    <div class="reveal">
-      <p class="lede">
-        Open to ML engineering and research roles, and to collaboration on generative
-        modelling or medical AI. Happy to talk through any of the work above in detail.
-      </p>
-      <a class="contact-mail" href="mailto:jeremymattathiasmboe@gmail.com">jeremymattathiasmboe@gmail.com</a>
-      <div class="contact-links">
-        <a class="btn" href="https://github.com/proprophet2503" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="btn" href="https://linkedin.com/in/jeremymboe" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="btn" href="assets/Jeremy_Mattathias_Mboe_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-      </div>
+    <p class="lede">
+      Open to research internships, ML engineering roles, and collaboration on medical
+      AI, generative modelling or inverse problems. Happy to talk through any of the work
+      above in detail.
+    </p>
+    <a class="contact-mail" href="mailto:jeremymattathiasmboe@gmail.com">jeremymattathiasmboe@gmail.com</a>
+    <div class="btn-row">
+      <a class="btn" href="https://github.com/proprophet2503" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn" href="https://linkedin.com/in/jeremymboe" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn" href="https://www.kaggle.com/jeremymattathiasmboe" target="_blank" rel="noopener noreferrer">Kaggle</a>
+      <a class="btn" href="https://huggingface.co/jeremymboe" target="_blank" rel="noopener noreferrer">Hugging Face</a>
+      <a class="btn btn-primary" href="assets/Jeremy_Mattathias_Mboe_CV.pdf" target="_blank" rel="noopener">Download CV</a>
     </div>
   </div>
 </section>
@@ -790,9 +598,9 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <span>Jeremy Mattathias Mboe, <span id="year">2026</span></span>
-    <span>Surabaya, Indonesia</span>
-    <span>Figures rendered in-browser. Schematic, not measured output.</span>
+    <span>Jeremy Mattathias Mboe</span>
+    <span>Machine learning for health, speech and vision</span>
+    <span>&copy; <span id="year">2026</span> &middot; Surabaya, Indonesia</span>
   </div>
 </footer>
 

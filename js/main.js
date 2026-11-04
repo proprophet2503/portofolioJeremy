@@ -1,33 +1,24 @@
 /**
- * Page bootstrap: scroll reveal, nav highlighting, repository grid, and lazy
- * mounting of each project visualization once it approaches the viewport.
+ * Page bootstrap: nav highlighting, mobile menu, the grouped further-projects
+ * list, and the footer year.
  */
-import { REPOS } from './data/repos.js';
+import { AREAS, REPOS } from './data/repos.js';
 
 const GITHUB_USER = 'proprophet2503';
 
-/* ---------- Scroll reveal ---------- */
-function initReveal() {
-  const targets = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)) {
-    targets.forEach((el) => el.classList.add('is-visible'));
-    return;
-  }
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
-  );
-  targets.forEach((el) => observer.observe(el));
+const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+
+/**
+ * @param {string} value
+ * @returns {string}
+ */
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (ch) => HTML_ESCAPES[ch]);
 }
 
 /* ---------- Nav current-section highlighting ---------- */
 function initNavSpy() {
+  if (!('IntersectionObserver' in window)) return;
   const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
   const sections = links
     .map((link) => document.querySelector(link.getAttribute('href')))
@@ -48,74 +39,48 @@ function initNavSpy() {
   sections.forEach((s) => observer.observe(s));
 }
 
-/* ---------- Secondary project grid ---------- */
-function renderRepos() {
-  const grid = document.getElementById('repo-grid');
-  if (!grid) return;
-
-  grid.innerHTML = REPOS.map(
-    (item) => `
-    <a class="repo-card" href="https://github.com/${GITHUB_USER}/${item.repo}" target="_blank" rel="noopener noreferrer">
-      <div class="repo-foot"><span class="repo-dot"></span><span>repository</span></div>
-      <h3>${item.name}</h3>
-      <p>${item.blurb}</p>
-      <div class="tech-row">${item.tags.map((t) => `<span class="tech">${t}</span>`).join('')}</div>
-    </a>`
-  ).join('');
-}
-
-/* ---------- Visualizations ---------- */
-const VIZ_MODULES = {
-  'flow-matching': () => import('./viz/flow-matching.js').then((m) => m.initFlowMatching),
-  'modality-fusion': () => import('./viz/modality-fusion.js').then((m) => m.initModalityFusion),
-  'beer-lambert': () => import('./viz/beer-lambert.js').then((m) => m.initBeerLambert),
-  spiking: () => import('./viz/spiking.js').then((m) => m.initSpiking),
-  'cough-lstm': () => import('./viz/cough-lstm.js').then((m) => m.initCoughLstm),
-  'eeg-subbands': () => import('./viz/eeg-subbands.js').then((m) => m.initEegSubbands),
-};
-
-async function mountViz(stage) {
-  const key = stage.dataset.viz;
-  const loader = VIZ_MODULES[key];
-  if (!loader) return;
-
-  const frame = stage.closest('.viz-frame');
-  const controls = frame ? frame.querySelector('.viz-controls') : null;
-  const readout = frame ? frame.querySelector('.viz-readout') : null;
-
-  try {
-    const init = await loader();
-    init(stage, controls, readout);
-    stage.dataset.state = 'ready';
-  } catch (error) {
-    // A failed figure must not take the rest of the page down with it.
-    stage.dataset.state = 'error';
-    stage.innerHTML =
-      '<p class="viz-readout" style="padding:1rem">Figure could not be loaded in this browser.</p>';
-    console.error(`Visualization "${key}" failed to mount`, error);
-  }
-}
-
-function initViz() {
-  const stages = Array.from(document.querySelectorAll('[data-viz]'));
-  if (!stages.length) return;
-
-  if (!('IntersectionObserver' in window)) {
-    stages.forEach(mountViz);
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        observer.unobserve(entry.target);
-        mountViz(entry.target);
-      });
-    },
-    { rootMargin: '300px 0px' }
+/* ---------- Mobile menu: close after picking a section ---------- */
+function initMobileNav() {
+  const toggle = document.getElementById('nav-toggle');
+  if (!toggle) return;
+  document.querySelectorAll('.nav-links a').forEach((link) =>
+    link.addEventListener('click', () => {
+      toggle.checked = false;
+    })
   );
-  stages.forEach((stage) => observer.observe(stage));
+}
+
+/* ---------- Further projects, grouped by area ---------- */
+/**
+ * @param {{ name: string, repo?: string, status?: string, blurb: string, tags: string[] }} item
+ * @returns {string}
+ */
+function projectItem(item) {
+  const link = item.repo
+    ? ` <a href="https://github.com/${GITHUB_USER}/${encodeURIComponent(item.repo)}" target="_blank" rel="noopener noreferrer">[code]</a>`
+    : '';
+  const status = !item.repo && item.status ? ` <em class="tags">(${escapeHtml(item.status)})</em>` : '';
+  return `
+    <div class="mini">
+      <h4>${escapeHtml(item.name)}${link}${status}</h4>
+      <p>${escapeHtml(item.blurb)}</p>
+      <p class="tags"><b>Tags:</b> ${item.tags.map(escapeHtml).join(', ')}</p>
+    </div>`;
+}
+
+function renderFurtherProjects() {
+  const host = document.getElementById('repo-grid');
+  if (!host) return;
+
+  host.innerHTML = AREAS.map((area) => {
+    const items = REPOS.filter((item) => item.area === area);
+    if (!items.length) return '';
+    return `
+    <div class="area">
+      <h3 class="area-title">${escapeHtml(area)}</h3>
+      <div class="mini-list">${items.map(projectItem).join('')}</div>
+    </div>`;
+  }).join('');
 }
 
 /* ---------- Footer year ---------- */
@@ -124,8 +89,7 @@ function initYear() {
   if (el) el.textContent = String(new Date().getFullYear());
 }
 
-initReveal();
 initNavSpy();
-renderRepos();
-initViz();
+initMobileNav();
+renderFurtherProjects();
 initYear();
